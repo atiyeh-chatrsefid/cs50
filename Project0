@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .search-input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        .search-submit {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4285f4;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .nav-links a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #4285f4;
+        }
+
+        .lucky-link {
+            margin-top: 10px;
+            display: block;
+            text-align: right;
+        }
+
+        .image-search-content,
+        .advanced-search-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <form action="https://www.google.com/search">
+            <div>
+                <input type="text" name="q" class="search-input">
+                <input type="submit" value="Google Search" class="search-submit">
+            </div>
+        </form>
+        <a href="#" class="nav-links" id="image-search-link">Image Search</a>
+        <a href="advanced.html" class="nav-links">Advanced Search</a>
+        <a href="https://www.google.com/search?q=" class="lucky-link">I'm Feeling Lucky</a>
+    </div>
+
+    <div class="image-search-content">
+        <div class="nav-links">
+            <a href="index.html">Back to Google Search</a>
+        </div>
+        <!-- Content for Google Image Search page -->
+    </div>
+
+    <script>
+        const imageSearchLink = document.getElementById('image-search-link');
+        const imageSearchContent = document.querySelector('.image-search-content');
+
+        imageSearchLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            imageSearchContent.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
